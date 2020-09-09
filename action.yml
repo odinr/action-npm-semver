@@ -1,0 +1,39 @@
+name: NPM SemVer
+description: Get SemVer from tag, package.json or latest release
+author: odin.rochmann@gmail.com
+branding:
+  icon: tag
+  color: blue
+
+inputs:
+  token:
+    description: github access token (used for 'version.latest')
+    default: ${{ github.token }}
+  owner:
+    description: repo owner (used for 'version.latest')
+  repo:
+    description: repo repo (used for 'version.latest')
+
+  version:
+    description: name of tag/ref, version, 'latest' or 'current'
+    require: true
+  bump:
+    description: increase version. when prerelease a provide the type of bump and tag, divided by space (prerelease pr9)
+
+outputs:
+  tag:
+    description: tag
+  prefix:
+    description: prefix
+  version:
+    description: version
+  coerce:
+    description: version x.y.z
+  prerelease:
+    description: prerelease name
+  iteration:
+    description: prerelease iteration
+
+runs:
+  using: "node12"
+  main: "dist/main.js"

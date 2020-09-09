@@ -1,0 +1,17 @@
+{
+  "name": "@codin/gh_action_npm_semver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.6.4",
+    "@types/semver": "^7.3.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.5",
+    "@actions/github": "^4.0.0",
+    "semver": "^7.3.2"
+  }
+}
